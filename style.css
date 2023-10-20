@@ -26,11 +26,14 @@ nav{
 }
 .right-side-nav{
     margin-right: 2vw;
-    align-items: center;
+    align-items: cent   er;
     justify-content: center;
     font-size: 1vw;
     display: flex;
     gap: 5vh;
+}
+.right-side-nav h3{
+    margin-top: 1vw;
 }
 .herosection{
     min-width: 100vw;
@@ -47,7 +50,7 @@ nav{
     min-width: 100vw;
     font-weight: 200;
     color: transparent;
-    -webkit-text-stroke: 6px white;
+    /* -webkit-text-stroke: 6px white; */
     display: flex;
     gap: -2vw;
     align-items: center;
@@ -56,4 +59,17 @@ nav{
 #headings h1{
     font-size: 10vw;
 
+}
+#yellow-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 3vw;
+    border-radius: 1vw 1vw 1vw 1vw; 
+    background-color: #ffd700;
+}
+#yellow-box h3{
+    margin: 0;
+    color: black;
 }
