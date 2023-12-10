@@ -31,10 +31,12 @@ main{
     margin: -69vw 0vw 0vw 0vw;
 }
 aside{
-    margin: -43.43vw 0vw 0vw 0vw;
+    /* position: sticky; */
+    margin: 0vw 0vw 0vw 0vw;
+    position: sticky;
     display: flex;
     width: 6vw;
-    height: 69vw;
+    height: auto;
     border-right: 0.1vw solid #3a3a3a;
 }
 nav{
@@ -66,16 +68,40 @@ nav h1 span{
     height: 2.5vw;
 }
 .nav-items{
-    width: 2vw;
+    width: 6vw;
     gap: 5vw;
     height: 2vw;
     margin: 2.3vw 34vw 0vw 0vw;
     display: flex;
 }
 .nav-items li{
+    width: 3vw;
+    display: inline-block;
     color: white;
     font-size: 1vw;
     transition: ease-out 0.2s;
+}
+.team-div{
+    width: 0;
+    height:0.1vw;
+    /* transition: width 0.2s linear; */
+    transform: translateY(0.3vw);
+    border-radius: 3vw;
+    background: #ffca7c;
+}
+.idea-div{
+    width: 0vw;
+    height:0.1vw;
+    transform: translateY(0.3vw);
+    border-radius: 3vw;
+    background: #ffca7c;
+}
+.contact-div{
+    width: 0vw;
+    height:0.1vw;
+    transform: translateY(0.3vw);
+    border-radius: 3vw;
+    background: #ffca7c;
 }
 #search-btn{
     fill: white;
@@ -97,13 +123,13 @@ nav h1 span{
 }
 .progress-bar{
     width: 25vw;
-    height: 0.13vw;
+    height: 0.17vw;
     background-color: #3a3a3a;
     border-radius: 3vw;
 }
 .progress-done{
-    width: 10vw;
-    height: 0.13vw;
+    width: 0vw;
+    height: 0.17vw;
     border-radius: 3vw;
     background-color: #ffca7c;
 }
@@ -114,15 +140,12 @@ nav h1 span{
     gap: 0.5vw;
 }
 .works li{
+    cursor: pointer;
     font-size: 0.9vw;
     color: rgb(119, 119, 119);
     font-weight: 800;
 }
-#selected-point{
-    font-weight: 800;
-    color: white;
-    font-size: 1.2vw;
-}
+
 .herotext{
     margin: 8vw 0vw 0vw 13vw;
     display: flex;
@@ -177,3 +200,22 @@ p{
     background: #4e4e4e;
     transition: ease-in 0.2s;   
 }
+
+nav ul li:hover::before{
+    width: 0vw;
+}
+nav ul li:hover::after{
+    width: 10vw;
+}
+.works li:hover{
+    font-size: 1.2vw;
+    color: rgb(255, 255, 255);;
+    transition: 0.2s ease-in-out;
+}
+/* @keyframes progress-done {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+} */
