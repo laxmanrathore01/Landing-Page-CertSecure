@@ -8,36 +8,14 @@
 html,body{
     overflow-x: hidden;
     font-family: 'Poppins';
-    background: #171717ba;
+    background: #000000ba;
+    height: 100vh;
 }
+
 #y-letter{
     color: #ffca7c;
     font-size: 4vw;
     line-height: 5vw;
-}
-/* .img-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img-container img{
-    width: 20vw;
-    height: 20vw;
-    margin: 0vw 0vw -30vw 0vw;
-} */
-main{
-    /* overflow-y: hidden; */
-    overflow-x: hidden;
-    margin: -69vw 0vw 0vw 0vw;
-}
-aside{
-    /* position: sticky; */
-    margin: 0vw 0vw 0vw 0vw;
-    position: sticky;
-    display: flex;
-    width: 6vw;
-    height: auto;
-    border-right: 0.1vw solid #3a3a3a;
 }
 nav{
     width: 100vw;
@@ -54,18 +32,6 @@ nav h1{
 }
 nav h1 span{
     color: #ffca7c;
-}
-.menu-btn{
-    width: 6vw;
-    height: 6vw;
-    background: #444444;
-    transition: ease-out 0.2s;
-}
-.menu-btn svg {
-    fill: white;
-    margin: 1.6vw 0vw 0vw 1.6vw;
-    width: 2.5vw;
-    height: 2.5vw;
 }
 .nav-items{
     width: 6vw;
@@ -84,7 +50,6 @@ nav h1 span{
 .team-div{
     width: 0;
     height:0.1vw;
-    /* transition: width 0.2s linear; */
     transform: translateY(0.3vw);
     border-radius: 3vw;
     background: #ffca7c;
@@ -102,9 +67,6 @@ nav h1 span{
     transform: translateY(0.3vw);
     border-radius: 3vw;
     background: #ffca7c;
-}
-#search-btn{
-    fill: white;
 }
 .herosection{
     display: flex;
@@ -144,6 +106,7 @@ nav h1 span{
     font-size: 0.9vw;
     color: rgb(119, 119, 119);
     font-weight: 800;
+    transition: 0.4s ease-in-out;
 }
 
 .herotext{
@@ -191,14 +154,92 @@ p{
 .nav-items li:hover{
     color: #ffca7c;
     transition: ease-in-out 0.3s;
-}
-.menu-btn:hover{
-    background: #4e4e4e;
-    transition: ease-in 0.2s;   
+    cursor: pointer;
 }
 .downward-circle:hover{
     background: #4e4e4e;
     transition: ease-in 0.2s;   
+}
+#cards{
+    width: 84vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 916px;
+    width: calc(100%-20px); */
+}
+.card-container{
+    margin: 7vw 0vw 0vw 0vw;
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cards:hover > .card > .card-border{
+    opacity: 1;   
+}
+.card{
+    background-color: rgba(255,255,255,0.1);
+    position: relative;
+    height: 17vw;
+    width: 24vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card:hover::before{
+    opacity: 1;
+}
+
+.card::before,
+.card> .card-border{
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    opacity: 0;
+    left: 0px;
+    transition: opacity 500ms;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+.card::before{
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255,255,255,0.06),
+        transparent 40%
+        ); 
+    z-index: 3;
+}
+.card> .card-border{
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y), 
+       #ffca7c,
+        transparent 20%
+        ); 
+    z-index: 1;
+}
+.card> .card-content{
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    background-color: rgb(23, 23, 23);
+    border-radius: inherit;
+    margin: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.card-content p{
+    font-size: 1vw;
+    text-align: center;
+    color: #5b5b5b;
+    width: 10vw;
 }
 
 nav ul li:hover::before{
