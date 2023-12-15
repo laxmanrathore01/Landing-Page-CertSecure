@@ -127,3 +127,46 @@ scroll.addEventListener('click',()=>{
     const container = document.querySelector('.card-container')
     const transition = container.scrollIntoView({behavior: 'smooth', top: 'cardContainer'.offsetTop})   
 })
+// // Initialize Intersection Observer
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             // Get the id of the intersecting element
+//             const targetId = entry.target.getAttribute('id');
+            
+//             // Update the selected list item based on the targetId
+//             updateSelectedListItem(targetId);
+//         }
+//     });
+// }, { threshold: 0.5 }); // You can adjust the threshold based on your needs
+
+// // Observe each element with the class 'works'
+// document.querySelectorAll('.works li').forEach(item => {
+//     observer.observe(item);
+// });
+
+// // Function to update the selected list item
+// function updateSelectedListItem(targetId) {
+//     // Reset styles for all list items
+//     document.querySelectorAll('.works li').forEach(item => {
+//         item.style.color = 'rgb(119, 119, 119)';
+//         item.style.fontSize = '0.9vw';
+//     });
+
+//     // Update styles for the selected list item
+//     const selectedItem = document.getElementById(targetId);
+//     if (selectedItem) {
+//         selectedItem.style.color = 'white';
+//         selectedItem.style.fontSize = '1.2vw';
+//     }
+// }
+
+// // Add a scroll event listener to handle scrolling
+// window.addEventListener('scroll', () => {
+//     // Update the selected list item based on the current scroll position
+//     const scrollPosition = window.scrollY;
+
+//     // Your logic to determine which list item to select based on the scroll position
+//     // For example, you can use the scroll position to determine which section is currently in view
+//     // and update the selected list item accordingly.
+// });
